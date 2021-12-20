@@ -50,3 +50,7 @@ def loginView(request):
             return render(request, 'accountmanager/login.html', context)
     else:
         return render(request, 'accountmanager/login.html')
+
+def logoutView(request):
+    logout(request)
+    return render(request, 'accountmanager/login.html')
