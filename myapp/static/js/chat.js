@@ -24,7 +24,15 @@ webSocket.onerror = function (e) {
 webSocket.onmessage = function (e) {
     const data = JSON.parse(e.data);
     console.log("Data:" + data);
-    document.querySelector('#chat-body').innerHTML += `<tr><td><p>${data.username}: ${data.message}</p></td></tr>`
+    document.querySelector('#chat-body').innerHTML += `<tr style="text-align: right;"> 
+    <td class="sent-message">
+        <div class="blue_box">
+            <span>
+                ${data.message}
+            </span>
+        </div>
+    </td>
+</tr>`
 }
 
 document.querySelector('#chat-message-submit').onclick = function (e) {
