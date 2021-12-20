@@ -1,3 +1,11 @@
+
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
 .back-top {
     background-color: #009688;
     height: 2.5vh;
@@ -26,16 +34,20 @@
 
 .row-chat-top {
     display: flex;
+    border: solid gray 1px;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 .row-chat-top-child {
-    flex: 1;
     text-align: center;
+    width: 75%;
 }
 
 .row-chat-top-child:first-child {
-    margin-right: 20px;
     text-align: center;
+    width: 25%;
+    border-right: solid 1px rgba(0,0,0,0.1);
 }
 
 .message-box {
@@ -43,7 +55,6 @@
 }
 
 .message-box-child {
-    flex: 1;
     text-align: left;
 }
 
@@ -53,7 +64,8 @@
 
 .contacts-table{
     width: 100%;
-    text-align: center;
+    text-align: left;
+    border-top: black solid 3px;
 }
 
 .front-container1 {
@@ -61,6 +73,8 @@
     top: 20px;
     left: 0;
     right: 0;
+    width: 60%;
+    margin: 2% auto;
 }
 
 .chat-top {
@@ -72,10 +86,11 @@
 }
 
 .profile-image {
-    margin-top: 7px;
+    margin-top: 17px;
     height: 30px;
     width: 30px;
     border-radius: 25px;
+    border: black solid 1px;
 }
 
 .contacts {
@@ -94,31 +109,96 @@
 }
 
 .message-table-scroll {
-    overflow-y: scroll;
-    max-height: 60vh;
+    overflow-y: scroll; 
+    max-height: 53vh;
+}
 
+.message-table-scroll::-webkit-scrollbar {
+    display: none;
 }
 
 .message-box {
     background-color: #f0f0f0;
-    height: fit-content;
+    height: 60px;
+    display: flex;
 }
+
+.message-box-child{
+    display: inline-block;
+    width: 5%;
+}
+
+.message-box-child button {
+    margin: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 0 10px 10px 0;
+    height: 40px;
+    padding: 10px;
+}
+
+.message-box-child button:hover {
+    background-color: #7CFC00;
+    color: black;
+}
+
+.message-box-child:first-child{
+    display: inline-block;
+    width: 90%;
+}
+
+.message-box-child:first-child input{
+    border: none;
+    margin: 10px;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+}
+
 
 .blue_box, .green_box {
     display: block;
     clear:both;
 }
 .blue_box span {
-    background-color: rgb(40, 105, 226);
     color: white;
     padding: 10px 5px;
     display: block;
     float: right;
 }
 .green_box span {
-    background-color: #009688;
     color: white;
     padding: 10px 5px;
     display: block;
     float: left;
+}
+
+tbody > tr > td > a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-left: 7px;
+}
+
+
+.row-chat-top-child:first-child tbody tr td{
+    border-top: solid gray 1px;
+}
+
+.green_box{
+    display: inline-block;
+    background-color: #009688;
+    border-radius: 0 10px 10px 0;
+    padding-right: 5px;
+}
+
+.blue_box{
+    display: inline-block;
+    background-color: rgb(40, 105, 226);
+    border-radius: 10px 0 0 10px;
+    padding-left: 5px;
+    padding-right: 3px;
 }
