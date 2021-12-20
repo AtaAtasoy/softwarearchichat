@@ -1,61 +1,124 @@
 .back-top {
     background-color: #009688;
-    height: 15vh;
-  }
-  
-  .back-main {
+    height: 2.5vh;
+}
+
+.back-main {
     background-color: #d9dbd5;
-    height: 85vh;
-  }
-  
-  .back-container {
+    height: 95vh;
+}
+
+.back-bottom {
+    background-color: #009688;
+    height: 2.5vh;
+}
+
+.back-container {
     position: relative;
-  }
-  
-  .front-container {
+}
+
+.front-container {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-  }
-  .front-container1 {
+}
+
+.row-chat-top {
+    display: flex;
+}
+
+.row-chat-top-child {
+    flex: 1;
+    text-align: center;
+}
+
+.row-chat-top-child:first-child {
+    margin-right: 20px;
+    text-align: center;
+}
+
+.message-box {
+    display: flex;
+}
+
+.message-box-child {
+    flex: 1;
+    text-align: left;
+}
+
+.message-box-child:first-child {
+    text-align: left;
+}
+
+.contacts-table{
+    width: 100%;
+    text-align: center;
+}
+
+.front-container1 {
     position: absolute;
     top: 20px;
     left: 0;
     right: 0;
-  }
-  
-  .chat-top {
+}
+
+.chat-top {
     background-color: #ededed;
-    min-height: 50px;
-  }
-  
-  .profile-image {
+}
+
+.chat-table {
+    width: 100%;
+}
+
+.profile-image {
     margin-top: 7px;
     height: 30px;
     width: 30px;
-  }
-  
-  .contacts {
-    background-color: #ffffff;
-    min-height: 600px;
-  }
-  
-  .contact-table-scroll {
-    overflow-y: scroll;
-    height: 600px;
-  }
-  
-  .message-area {
+    border-radius: 25px;
+}
+
+.contacts {
+    margin-top: 20px;
     background-color: #e4e1de;
-    min-height: 600px;
-  }
-  
-  .message-table-scroll {
+}
+
+.contact-table-scroll {
     overflow-y: scroll;
-    height: 550px;
-  }
-  
-  .message-box {
+}
+
+.message-area {
+    margin-top: 20px;
+    background-color: #e4e1de;
+    max-height: 60vh;
+}
+
+.message-table-scroll {
+    overflow-y: scroll;
+    max-height: 60vh;
+
+}
+
+.message-box {
     background-color: #f0f0f0;
-  }
+    height: fit-content;
+}
+
+.blue_box, .green_box {
+    display: block;
+    clear:both;
+}
+.blue_box span {
+    background-color: rgb(40, 105, 226);
+    color: white;
+    padding: 10px 5px;
+    display: block;
+    float: right;
+}
+.green_box span {
+    background-color: #009688;
+    color: white;
+    padding: 10px 5px;
+    display: block;
+    float: left;
+}
