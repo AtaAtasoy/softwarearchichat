@@ -1,22 +1,48 @@
-{% load static %}
-<link rel="stylesheet"  href="{% static 'css/register.css' %}">
-<div class="register-page">
-    <div class="form">
-      <form class="register-form" method="POST" action="{% url 'accounts:register' %}">
-        {% csrf_token %}
-        <h2 class="register-title">REGISTER</h3>
-        <h4>{{form.username.label}}</h4>
-        {{form.username}}
-        <h4>{{form.email.label}}</h4>
-        {{form.email}}
-        <h4>{{form.password1.label}}</h4>
-        {{form.password1}}
-        <h4>{{form.password2.label}}</h4>
-        {{form.password2}}
-        <input type="submit" value="Register" class="btn btn-primary">
-        <p class="message">Already registered? <a href="{% url 'accounts:login' %}">Log In</a></p>
-        </form>
-        {{ form.errors }}
-    </div>
 
-  </div>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Page</title>
+	<meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="register.css">
+</head>
+<body>
+	<div class="back-container">
+        <div class="container-fluid front-container">
+            <div class="back-top"></div>
+            <div class="back-main"></div>
+            <div class="back-bottom"></div>
+        </div>
+        <div class="container front-container1">
+        	<div class="login-page">
+        		<h1>Software ArchiChat</h1>
+                {% load static %}
+                <link rel="stylesheet"  href="{% static 'css/register.css' %}">
+                <div class="register-page">
+                    <div class="reg-container">
+                        <div class="form">
+                            <form class="register-form" method="POST" action="{% url 'accounts:register' %}">
+                            {% csrf_token %}
+                            <h2 class="register-title">REGISTER</h3>
+                            <h4>{{form.username.label}}</h4>
+                            {{form.username}}
+                            <h4>{{form.email.label}}</h4>
+                            {{form.email}}
+                            <h4>{{form.password1.label}}</h4>
+                            {{form.password1}}
+                            <h4>{{form.password2.label}}</h4>
+                            {{form.password2}}
+                            <input type="submit" value="Register" class="btn btn-primary">
+                            <p class="message">Already registered? <a href="{% url 'accounts:login' %}">Log In</a></p>
+                            </form>
+                            {{ form.errors }}
+                        </div>
+                    </div> 
+                </div>
+            </div>    
+        </div>
+    </body>
+</html>
