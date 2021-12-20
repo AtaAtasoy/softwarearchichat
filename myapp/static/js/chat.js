@@ -23,16 +23,27 @@ webSocket.onerror = function (e) {
 
 webSocket.onmessage = function (e) {
     const data = JSON.parse(e.data);
-    console.log("Data:" + data);
-    document.querySelector('#chat-body').innerHTML += `<tr style="text-align: right;"> 
-    <td class="sent-message">
-        <div class="blue_box">
-            <span>
-                ${data.message}
-            </span>
-        </div>
-    </td>
-</tr>`
+    if (data.username == message_username) {
+        document.querySelector('#chat-body').innerHTML += `<tr style="text-align: right;"> 
+                                                                <td class="sent-message">
+                                                                    <div class="blue_box">
+                                                                        <span>
+                                                                            ${data.message}
+                                                                        </span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>`
+    } else {
+        document.querySelector('#chat-body').innerHTML += `<tr style="text-align: left;">
+                                                                <td class="received-message">
+                                                                    <div class="green_box">
+                                                                        <span>
+                                                                            ${data.message}
+                                                                        </span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>`
+    }
 }
 
 document.querySelector('#chat-message-submit').onclick = function (e) {
