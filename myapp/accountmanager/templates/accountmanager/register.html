@@ -1,7 +1,22 @@
-<div class="register-container">
-    <form action="{% url 'accounts:register' %}" method="post">
+{% load static %}
+<link rel="stylesheet"  href="{% static 'css/register.css' %}">
+<div class="register-page">
+    <div class="form">
+      <form class="register-form" method="POST" action="{% url 'accounts:register' %}">
         {% csrf_token %}
-        {{form.as_p}}
+        <h2 class="register-title">REGISTER</h3>
+        <h4>{{form.username.label}}</h4>
+        {{form.username}}
+        <h4>{{form.email.label}}</h4>
+        {{form.email}}
+        <h4>{{form.password1.label}}</h4>
+        {{form.password1}}
+        <h4>{{form.password2.label}}</h4>
+        {{form.password2}}
         <input type="submit" value="Register" class="btn btn-primary">
-    </form>
-</div>
+        <p class="message">Already registered? <a href="{% url 'accounts:login' %}">Log In</a></p>
+        </form>
+        {{ form.errors }}
+    </div>
+
+  </div>
