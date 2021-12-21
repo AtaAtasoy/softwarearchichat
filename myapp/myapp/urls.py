@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.urls import path, include
 from chat.views import index, room
+from accountmanager.views import loginView
 
 urlpatterns = [
+    path('accounts/login', loginView, name='login'),
     path('accounts/', include(('accountmanager.urls', 'accountmanager'), namespace='accounts')),
     path('', index, name='home'),
     path('<str:username>/', room, name='chat'),
