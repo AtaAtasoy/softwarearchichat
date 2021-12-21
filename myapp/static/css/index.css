@@ -11,6 +11,16 @@ body {
     height: 2.5vh;
 }
 
+.imageContainer{
+    height: 100px;
+    text-align: center;
+    margin-bottom: 25px; 
+}
+
+.imageContainer img{
+    height: 100%;
+}
+
 .back-main {
     background-color: #d9dbd5;
     height: 95vh;
@@ -70,7 +80,7 @@ body {
 
 .front-container1 {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 0;
     right: 0;
     width: 60%;

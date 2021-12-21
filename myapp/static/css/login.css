@@ -14,7 +14,7 @@ form {
     border: 1px solid black;
     border-radius: 25px;
     margin: 0 auto;
-    margin-top: 10%; 
+    margin-top: 5%; 
     background-color: white;
 }
 
@@ -27,14 +27,13 @@ form input{
 form button{
     width: 52%;
     margin: 15px auto;
-    background-color: green;
+    background-color: #009688;
     color: white;
     cursor: pointer;
 }
 
 form button:hover{
-    background-color: #7CFC00;
-    color: black;
+    background-color: green;
 }
 
 .back-top {
@@ -65,6 +64,11 @@ form button:hover{
     margin: 2% auto;
 }
 
-.logo-image{
-    
+.imageContainer{
+    height: 200px;
+    text-align: center;
+}
+
+.imageContainer img{
+    height: 100%;
 }

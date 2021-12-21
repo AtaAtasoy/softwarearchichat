@@ -70,6 +70,21 @@ h2, p, input{
     margin: 2% auto;
 }
 
-.logo-image{
-    
+.imageContainer{
+    height: 200px;
+    text-align: center;
+}
+
+.imageContainer img{
+    height: 100%;
+}
+
+input[type="submit" i]{
+    background-color: #009688;
+    color: white;
+    width: 103%;
+}
+
+input[type="submit" i]:hover{
+    background-color: green;
 }
