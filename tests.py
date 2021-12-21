@@ -94,7 +94,7 @@ send_button.click()
 message_table = browser.find_element(By.XPATH, '/html/body/div/div[2]/div[2]/div[2]/div/div[1]')
 browser.implicitly_wait(5)
 assert "This is a test message" in message_table.text
-print("SENT MESSAGE SUCCESSFULLY")
+print("SENT MESSAGE TO ", valid_username2, " SUCCESSFULLY")
 
 browser.get("http://localhost:8000/accounts/logout")
 WebDriverWait(browser, timeout=10).until(EC.presence_of_all_elements_located)
@@ -122,6 +122,6 @@ print("OPENED CHAT WITH ", valid_username, " SUCCESSFULLY")
 
 message_table = browser.find_element(By.XPATH, '/html/body/div/div[2]/div[2]/div[2]/div/div[1]')
 assert "This is a test message" in message_table.text
-print("RECEIVED THE MESSAGE ", valid_username, " SUCCESSFULLY")
+print("RECEIVED THE MESSAGE FROM ", valid_username, " SUCCESSFULLY")
 
 browser.close()
