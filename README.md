@@ -7,7 +7,7 @@
 
 ## Instructions to run the program
 
-Docker is required to run the program.
+Install [Docker](https://docs.docker.com/get-docker/) and [Python](https://www.python.org/downloads/) to run the program.
 
 ```bash
 python3 -m venv venv
